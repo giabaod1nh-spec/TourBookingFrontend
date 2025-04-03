@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Tours - Book Your Next Journey</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Adventure Tours</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <h1>Discover Amazing Places</h1>
+            <p>Book your next adventure with us</p>
+        </section>
+
+        <section id="tours" class="tours">
+            <h2>Popular Tours</h2>
+            <div class="tours-grid" id="toursGrid"></div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Welcome to Adventure Tours, your gateway to extraordinary travel experiences. Since 2010, we've been crafting unforgettable journeys for adventurous souls around the globe.</p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Our Mission</h3>
+                        <p>To provide exceptional travel experiences that inspire, challenge, and connect people with the world's most remarkable destinations.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Why Choose Us</h3>
+                        <p>Expert guides, carefully curated itineraries, and a commitment to sustainable tourism make us your ideal travel partner.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Experience</h3>
+                        <p>With over a decade of experience, we've helped thousands of travelers create lasting memories across all continents.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions about our tours? We're here to help!</p>
+                        <div class="contact-details">
+                            <p><strong>Email:</strong> info@adventuretours.com</p>
+                            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                            <p><strong>Address:</strong> 123 Adventure Street, Explorer City, EC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Book Your Tour</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" min="1" max="10" required>
+                    </div>
+                    <button type="submit" class="btn">Proceed to Payment</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Payment Modal -->
+        <div id="paymentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Payment Details</h2>
+                <div id="paymentSummary" class="payment-summary"></div>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" maxlength="16" required pattern="\d{16}" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" maxlength="5" required placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" maxlength="3" required pattern="\d{3}" placeholder="123">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Complete Payment</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Adventure Tours. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
